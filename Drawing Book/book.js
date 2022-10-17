@@ -32,18 +32,20 @@ function readLine() {
  */
 
 function pageCount(n, p) {
+    let pagesTurnedToP = p
     if(p % 2 == 1)
-        p -= 1
-    p /= 2
+        pagesTurnedToP -= 1
+    pagesTurnedToP /= 2 
 
+    let pagesTurnedToEnd = n
     if(n % 2 == 1)
-        n -= 1
-    n /= 2
+        pagesTurnedToEnd -= 1
+    pagesTurnedToEnd /= 2
 
-    if(p < n-p)
-        return p 
+    if(pagesTurnedToP < pagesTurnedToEnd-pagesTurnedToP)
+        return pagesTurnedToP 
     else    
-        return n-p
+        return pagesTurnedToEnd-pagesTurnedToP
 }
 
 function main() {
